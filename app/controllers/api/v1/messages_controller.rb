@@ -2,7 +2,7 @@
 module Api
   module V1
   class MessagesController < ApplicationController
-    before_action :authenticate_request
+    # before_action :authenticate_request
 
 
     # GET /api/messages
