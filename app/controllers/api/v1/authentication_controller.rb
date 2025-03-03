@@ -32,11 +32,12 @@ module Api
         @user = User.find_by(email: permitted_params[:email])
         puts '-----------------'
           puts permitted_params[:email]
+          puts permitted_params[:password]
           # user = User.find_by(email: permitted_params[:email])
-          puts Rails.env
           user = User.find_by(email: permitted_params[:email])
           puts User.last.email
           puts user.email
+          puts @user.email
         puts '-----------------'
         if @user&.authenticate(permitted_params[:password])
           token = JwtService.encode(user_id: @user.id.to_s)
