@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+ SMS messenger app. 
+ 
+- uses atlas and mongodb as db
+- user authentication
+- twilio for text messaging
 
-* Ruby version
+### Setup
 
-* System dependencies
+    1. ASDF for version control on ruby 3.3.7.
+    2. Install gems with `bundle install`
+    3. rails s
 
-* Configuration
+Frontend repo:
+[here](https://github.com/jminterwebs/smsFrontend)
 
-* Database creation
 
-* Database initialization
+ENV variables needed:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    - TWILIO_SID : twilio acount sid
+    - TWILIO_AUTH_TOKEN : twilio auth token
+    - MONGODB_URI : atlas mongodb uri
