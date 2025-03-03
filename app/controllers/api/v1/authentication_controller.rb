@@ -28,7 +28,9 @@ module Api
       end
 
       def login
-
+        puts "------------"
+        puts permitted_params[:email]
+        puts "------------"
         @user = User.find_by(email: permitted_params[:email])
 
         if @user&.authenticate(permitted_params[:password])
