@@ -30,22 +30,12 @@ module Api
       def login
 
         @user = User.find_by(email: permitted_params[:email])
-        puts '-----------------'
-          puts permitted_params[:email]
-          puts permitted_params[:password]
-          # user = User.find_by(email: permitted_params[:email])
-          user = User.find_by(email: permitted_params[:email])
-          puts User.last.email
-          puts user.email
-          puts @user.email
-        puts '-----------------'
+
         if @user&.authenticate(permitted_params[:password])
           token = JwtService.encode(user_id: @user.id.to_s)
 
           puts "------------"
-          puts permitted_params[:email]
-          User.find_by(email: permitted_params[:email]).email
-
+          puts token
           puts "------------"
           render json: { token: token, user: { id: @user.id.to_s, name: @user.name, email: @user.email } }
         else
