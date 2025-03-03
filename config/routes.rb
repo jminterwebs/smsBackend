@@ -1,5 +1,8 @@
 # config/routes.rb
 Rails.application.routes.draw do
+
+  root to: 'home#index'
+
   namespace :api do
     namespace :v1 do
       post 'login', to: 'authentication#login'
