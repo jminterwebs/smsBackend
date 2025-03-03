@@ -10,7 +10,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
 
   # For production environment
   allow do
-    origins 'https://your-production-domain.com'  # Change this to your production domain
+    origins 'https://sms-front-end.netlify.app'  # Change this to your production domain
 
     resource '*',
              headers: :any,
