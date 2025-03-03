@@ -28,6 +28,7 @@ module Api
       end
 
       def login
+
         @user = User.find_by(email: permitted_params[:email])
 
         if @user&.authenticate(permitted_params[:password])

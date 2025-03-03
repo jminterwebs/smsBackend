@@ -7,6 +7,7 @@ class User
   field :email, type: String
   field :password_digest, type: String
 
+
   has_secure_password
 
   validates :email, presence: true, uniqueness: true
@@ -15,4 +16,6 @@ class User
   validates :name, presence: true
 
   index({ email: 1 }, { unique: true })
+
+  has_many :messages
 end

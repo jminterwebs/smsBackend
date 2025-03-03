@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       delete 'logout', to: 'authentication#logout'
 
       resources :users, only: [:create]
+      resources :messages
       # Add other protected routes here
     end
 

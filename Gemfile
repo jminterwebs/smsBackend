@@ -29,7 +29,8 @@ gem "thruster", require: false
 gem 'mongoid'
 gem 'rack-cors'
 gem 'jwt'
-
+gem "attr_extras"
+gem 'twilio-ruby'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
