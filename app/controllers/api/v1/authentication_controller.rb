@@ -32,7 +32,8 @@ module Api
         @user = User.find_by(email: permitted_params[:email])
         puts '-----------------'
           puts permitted_params[:email]
-          user = User.find_by(email: permitted_params[:email])
+          # user = User.find_by(email: permitted_params[:email])
+          user = User.where(email: permitted_params[:email]).first
           user.email
         puts '-----------------'
         if @user&.authenticate(permitted_params[:password])
