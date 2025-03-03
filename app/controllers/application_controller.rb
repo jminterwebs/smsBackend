@@ -8,7 +8,6 @@ class ApplicationController < ActionController::API
   def authenticate_request
     header = request.headers['Authorization']
     token = header.split(' ').last if header
-
     if token
       decoded = JwtService.decode(token)
       if decoded
