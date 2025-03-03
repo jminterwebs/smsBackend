@@ -30,6 +30,8 @@ module Api
       def login
         puts "------------"
         puts permitted_params[:email]
+        User.find_by(email: permitted_params[:email])
+
         puts "------------"
         @user = User.find_by(email: permitted_params[:email])
 
