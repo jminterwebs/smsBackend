@@ -17,11 +17,11 @@ module Twilio
     def send_sms
     @client = twilio_client
     begin
-      response = @client.messages.create(
+      @client.messages.create(
           # Need to use dummy numbers for testing purposes
           from: '+18667529020',
           to: '+18777804236',
-          body: 'message_text'
+          body: message_text
         )
 
       rescue Twilio::REST::TwilioError => e
