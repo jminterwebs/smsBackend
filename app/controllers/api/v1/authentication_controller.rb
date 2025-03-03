@@ -34,9 +34,9 @@ module Api
           puts permitted_params[:email]
           # user = User.find_by(email: permitted_params[:email])
           puts Rails.env
-          user = User.where(email: permitted_params[:email]).first
+          user = User.find_by(email: permitted_params[:email])
           puts User.last.email
-          user.email
+          puts user.email
         puts '-----------------'
         if @user&.authenticate(permitted_params[:password])
           token = JwtService.encode(user_id: @user.id.to_s)
