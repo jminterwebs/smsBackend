@@ -33,7 +33,9 @@ module Api
         puts '-----------------'
           puts permitted_params[:email]
           # user = User.find_by(email: permitted_params[:email])
+          puts Rails.env
           user = User.where(email: permitted_params[:email]).first
+          puts User.last.email
           user.email
         puts '-----------------'
         if @user&.authenticate(permitted_params[:password])
