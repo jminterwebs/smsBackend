@@ -31,13 +31,13 @@ module Api
 
         @user = User.find_by(email: permitted_params[:email])
 
-        # if @user&.authenticate(permitted_params[:password])
+        if @user&.authenticate(permitted_params[:password])
           token = JwtService.encode(user_id: @user.id.to_s)
 
           render json: { token: token, user: { id: @user.id.to_s, name: @user.name, email: @user.email } }
-        # else
-        #   render json: { error: 'Invalid credentials' }, status: :unauthorized
-        # end
+        else
+          render json: { error: 'Invalid credentials' }, status: :unauthorized
+        end
       end
 
 
