@@ -26,7 +26,7 @@ module Api
           message: 'Twilio message sending failed'
         }, status: :unprocessable_entity
       end
-      @message = Message.create(message_params.merge(@twilio_message).merge(user: current_user))
+      @message = Message.new(message_params.merge(@twilio_message).merge(user: current_user))
 
       if @message.save
         render json: @message.as_json(except: [:_id], methods: [:id]), status: :created

@@ -4,8 +4,8 @@ class Message
   include Mongoid::Timestamps
 
   # Fields
-  field :number_input, type: Integer
-  field :message_text, type: String
+  field :numberInput, type: Integer
+  field :messageText, type: String
   field :twilio_id, type: String
   field :to, type: String
   field :from, type: String
@@ -14,8 +14,8 @@ class Message
   belongs_to :user
 
   # Validations
-  validates :number_input, presence: true, numericality: { greater_than_or_equal_to: 7 }
-  validates :message_text, presence: true, length: { minimum: 10 }
+  validates :numberInput, presence: true, numericality: { greater_than_or_equal_to: 7 }
+  validates :messageText, presence: true, length: { minimum: 10 }
 
   # Indexes
   index({ user_id: 1, created_at: -1 })
