@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 ruby "3.3.7"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.1"
+gem "rails", "~> 8.0.2"
 gem 'dotenv', groups: [:development, :test]
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
