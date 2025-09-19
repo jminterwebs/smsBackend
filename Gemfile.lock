@@ -74,7 +74,7 @@ GEM
       uri (>= 0.13.1)
     ast (2.4.2)
     attr_extras (7.1.0)
-    base64 (0.2.0)
+    base64 (0.3.0)
     bcrypt (3.1.20)
     bcrypt_pbkdf (1.1.1)
     bcrypt_pbkdf (1.1.1-arm64-darwin)
@@ -115,7 +115,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.10.1)
-    jwt (2.10.1)
+    jwt (3.1.2)
       base64
     kamal (2.5.3)
       activesupport (>= 7.0)
@@ -290,12 +290,10 @@ GEM
     thruster (0.1.11-x86_64-darwin)
     thruster (0.1.11-x86_64-linux)
     timeout (0.4.3)
-    twilio-ruby (7.4.5)
-      benchmark
+    twilio-ruby (7.8.1)
       faraday (>= 0.9, < 3.0)
-      jwt (>= 1.5, < 3.0)
+      jwt (>= 1.5, < 4.0)
       nokogiri (>= 1.6, < 2.0)
-      ostruct
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (3.1.4)
